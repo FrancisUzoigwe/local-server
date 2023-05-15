@@ -127,25 +127,45 @@
 //     console.log("Server is now live..")
 // })
 
+// import http, { ServerResponse } from "http";
+
+// const server = http.createServer(
+//     (req : http.IncomingMessage, res : ServerResponse<http.IncomingMessage>) => {
+//         res.writeHead((res.statusCode = 200), {
+//             "content-type": "text/html"
+//         })
+
+//        const realData =  req.rawHeaders
+//        console.log(realData)
+    
+//     }
+// )
+
+// server.on("Connection", () => {
+//     console.log("A connection was established")
+// })
+
+// server.listen(4040, () => {
+//     console.log("")
+//     console.log("Server is now live..")
+// })
+
+//Practices
 import http, { ServerResponse } from "http";
 
 const server = http.createServer(
     (req : http.IncomingMessage, res : ServerResponse<http.IncomingMessage>) => {
         res.writeHead((res.statusCode = 200), {
-            "content-type": "text/html"
+            "content-type": "text/htm;",
         })
-
-       const realData =  req.rawHeaders
-       console.log(realData)
-    
     }
 )
 
 server.on("Connection", () => {
-    console.log("A connection was established")
-})
+    console.log("A user connected")
+});
 
-server.listen(4040, () => {
+server.listen(3500, () => {
     console.log("")
     console.log("Server is now live..")
 })
