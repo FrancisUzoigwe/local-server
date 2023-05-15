@@ -151,21 +151,40 @@
 // })
 
 //Practices
+// import http, { ServerResponse } from "http";
+
+// const server = http.createServer(
+//     (req : http.IncomingMessage, res : ServerResponse<http.IncomingMessage>) => {
+//         res.writeHead((res.statusCode = 200), {
+//             "content-type": "text/htm;",
+//         })
+//     }
+// )
+
+// server.on("Connection", () => {
+//     console.log("A user connected")
+// });
+
+// server.listen(3500, () => {
+//     console.log("")
+//     console.log("Server is now live..")
+// });
+
 import http, { ServerResponse } from "http";
 
 const server = http.createServer(
-    (req : http.IncomingMessage, res : ServerResponse<http.IncomingMessage>) => {
-        res.writeHead((res.statusCode = 200), {
-            "content-type": "text/htm;",
+    (res : http.IncomingMessage, req : ServerResponse<http.IncomingMessage>) => {
+        req.writeHead((req. statusCode = 200), {
+            "content-type":"text/html",
         })
     }
 )
 
 server.on("Connection", () => {
-    console.log("A user connected")
-});
+    console.log("A user is connecting...")
+})
 
-server.listen(3500, () => {
+server.listen(2000, () => {
     console.log("")
     console.log("Server is now live..")
 })
