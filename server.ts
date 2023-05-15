@@ -182,9 +182,9 @@ const server = http.createServer(
 
 server.on("Connection", () => {
     console.log("A user is connecting...")
-})
+}),
 
 server.listen(2000, () => {
     console.log("")
     console.log("Server is now live..")
-})
+});
